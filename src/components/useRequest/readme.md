@@ -171,7 +171,7 @@ function getMockData() {
   });
 }
 
-const { loading, data } = useRequest(getMockData, { manual: true });
+const { loading, data, run } = useRequest(getMockData, { manual: true });
 </script>
 ```
 
