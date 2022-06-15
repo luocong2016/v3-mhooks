@@ -37,7 +37,7 @@ function useRequestImplement<R, P extends any[]>(
     refocusTimespan = 5000,
     refreshDeps = [],
     retryCount = 0,
-    retryInterval = 0,
+    retryInterval = undefined,
     onSuccess = undefined,
     onError = undefined,
     onBefore = undefined,
