@@ -17,7 +17,7 @@ const useRetryPlugin = ({ retryCount, retryInterval }: RetryPlugin) => {
     count.value += 1;
 
     if (retryCount === -1 || count.value <= retryCount) {
-      const timeout = retryInterval ?? Math.min(1000 * 2 ** retryCount, 30000);
+      const timeout = retryInterval ?? Math.min(1000 * 2 ** count.value, 30000);
 
       count.value = setTimeout(retryFunc, timeout);
     } else {
